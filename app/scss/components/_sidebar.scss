@@ -1,0 +1,37 @@
+@use '../util' as u;
+
+.sidebar{
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    padding: 0.78rem;
+
+}
+.sidebar::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 2px;
+    background-color: u.$details-color;
+}
+.left{
+    left: 20px;
+    right: auto;
+}
+.right{
+    left: auto;
+    right: 20px;
+
+}
+.outer{
+    display:block;
+    writing-mode: tb-rl;
+    align-items:center;
+    transform: rotate(180deg);
+}
+.rotation-text{
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}

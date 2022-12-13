@@ -1,0 +1,27 @@
+:root{
+    --fs-hero: 40px;
+    --fs-header: 30px;
+    --fs-elements: 25px;
+    --fs-body: 16px;
+}
+h1, h2, h3 {
+    
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+a, a:visited, 
+a:active {
+    text-decoration: none;
+}
+
+ul,li
+{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
