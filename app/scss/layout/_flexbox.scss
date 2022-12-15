@@ -1,19 +1,6 @@
-html, body {
-  height: 100%;
-      /* required for full height sidebars */
-}
 .container{
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-}
-
-.main {
-  display: block;
-  padding: 80px 50px;
-}
-
-.section{
-  width: 100%;
   min-height: 100vh;
+  
 }
