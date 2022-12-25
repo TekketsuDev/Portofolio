@@ -1,33 +1,54 @@
-.grid{
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: auto;
-    gap:40px;
+    .main{
+        margin: 0px auto;
+        width: 100%;
+        max-width: 1600px;
+        min-height: 100vh;
+    }
 
-    //Offset display to 1 co
-    // @media (min-width:900px) {
-    //     grid-template-columns: 2fr 1fr;
-    // }
-    &__main, &__hero, &__skills, &__projects, &__contact{
+    .hero, .skills, .projects, .contact{
         height: 100vh;
         padding: 0 70px;
+    
+
+        @media (min-width:900px) {
+ 
+        }
     }
 
-    &__hero{
-        background-color: violet;
-    }
-    &__skills{
+    .skills{
         background-color: blueviolet;
     }   
-    &__projects{
+    .projects{
         background-color: green;
     }
-    &__contact{
+    .contact{
         background-color: pink;
     }
 
     
+
+
+.hero{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: violet;
+
+    &__image{
+        width: 400px;
+        height: 400px
+    }
+    
+    &__text{
+        //Include font-size relative to max spacing containing
+            // clamp (min value in the range, 
+        width: clamp(50%,40vw,70%);
+        
+    }
+
 }
+
 // .grid {
 //   @mixin small-layout($breakpoint) {
   
@@ -36,4 +57,4 @@
 
 //   }
 
-// }
+// 

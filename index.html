@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" type="text/css" href="app/scss/components/_loading-bar.scss"/>
+    <script type="text/javascript" src="/app/js/lib/loading-bar.js"></script>
 </head>
 <body>
-  
-  <div class="container">
+
     <header class="header">
           <div>
           <img class="logo" alt="cat-logo" src="/images/navbar/catlogoDEF.png" >
@@ -26,22 +27,29 @@
             </ul>
         </nav>   
     </header>   
-    <main class="grid"> 
-      <section class="grid__hero" id="about">
-        <h1>Hi, my name is Victor Jamet</h1>
-        <p>I am a selftaught programmer focused
-          on web development based in Spain</p>
-          <!-- <img src="/images/content/Interface.svg" alt="interface-img"> -->
-        </section>
-        <section class="grid__skills" id="skills">
-        </section>
-        <section class="grid__projects" id="projects">
-          <h1>My Recent Projects </h1>
-        </section>
-        <section class="grid__contact" id="contact">
-        </section>
-      </main>
-    </div>
+    <main class="main"> 
+      <section class="hero" id="about">
+        <div class="hero__text">
+          <h1 class="show">Hi, my name is Victor Jamet</h1>
+          <p class="content">I am a selftaught programmer focused
+            on web development based in Spain</p>
+        </div>
+        <img class="hero__image" src="/images/content/Interface.svg" alt="interface-img">
+        <div class="card">
+          <div class="card__ldBar ldBar label-center mybar" id="mibarra" data-value="50" data-preset="circle"></div>
+          <div class="card__text">HTML/CSS</div>
+        </div>
+        
+
+      </section>
+      <section class="skills" id="skills">
+      </section>
+      <section class="projects" id="projects">
+        <h1>My Recent Projects </h1>
+      </section>
+      <section class="contact" id="contact">
+      </section>
+    </main>
   
   <aside class="sidebar left">       
     <ul>
