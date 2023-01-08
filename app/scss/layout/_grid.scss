@@ -1,60 +1,83 @@
-    .main{
-        margin: 0px auto;
-        width: 100%;
-        max-width: 1600px;
-        min-height: 100vh;
-    }
+@use '../globals/' as g;
+.main{
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
+}
+.hero, .skills, .projects, .contact{
+    height: 100vh;
+    padding: 0 70px;
 
-    .hero, .skills, .projects, .contact{
-        height: 100vh;
-        padding: 0 70px;
-    
 
-        @media (min-width:900px) {
- 
-        }
-    }
 
-    .skills{
-        background-color: blueviolet;
-    }   
-    .projects{
-        background-color: green;
-    }
-    .contact{
-        background-color: pink;
-    }
+}
+.skills{
+    background-color: blueviolet;
+}   
+.projects{
+    background-color: green;
+}
+.contact{
+    background-color: pink;
+}
 
-    
 
 
 .hero{
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: center;
-    background-color: violet;
-
+    background-color: rgba(238, 130, 238, 0.361);
+    
     &__image{
-        width: 400px;
-        height: 400px
+        width: 380px;
+        height: 420px;
     }
     
     &__text{
         //Include font-size relative to max spacing containing
             // clamp (min value in the range, 
-        width: clamp(50%,40vw,70%);
+       width: 50%;
+
+       flex-wrap: wrap;
         
+        
+
+    }
+
+    &__skills{
+        display: flex;
+        gap: 2rem;
     }
 
 }
 
-// .grid {
-//   @mixin small-layout($breakpoint) {
-  
-//   }
-//   @mixin big-layout($breakpoint) {
+/*------------------------------------*\
+  #HERO-BREAKPOINTS
+\*------------------------------------*/
 
-//   }
+@include g.breakpoint(small){
+    .hero{
+        background-color: blue;
 
-// 
+    }
+    .sidebar{
+        display: none;
+    }
+}
+
+/*------------------------------------*\
+  #SKILLS-BREAKPOINTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #PROJECTS-BREAKPOINTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #CONTACT-BREAKPOINTS
+\*------------------------------------*/

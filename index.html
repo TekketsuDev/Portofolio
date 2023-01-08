@@ -14,42 +14,64 @@
 </head>
 <body>
 
-    <header class="header">
-          <div>
-          <img class="logo" alt="cat-logo" src="/images/navbar/catlogoDEF.png" >
-          </div>
-          <nav class="nav-list">
-            <ul class="nav-list">
-              <li><a href="#about">about</a></li>
-              <li><a href="#skills">skills</a></li>
-              <li><a href="#projects">projects</a></li>
-              <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>   
-    </header>   
-    <main class="main"> 
-      <section class="hero" id="about">
-        <div class="hero__text">
-          <h1 class="show">Hi, my name is Victor Jamet</h1>
-          <p class="content">I am a selftaught programmer focused
-            on web development based in Spain</p>
+  <header class="header">
+        <div>
+        <img class="logo" alt="cat-logo" src="/images/navbar/catlogoDEF.png" >
         </div>
-        <img class="hero__image" src="/images/content/Interface.svg" alt="interface-img">
+        <nav class="nav-list">
+          <ul class="nav-list">
+            <li><a href="#about">about</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+      </nav>   
+  </header>  
+
+  <main class="main"> 
+    <section class="hero" id="about">
+      <div class="hero__text">
+        <h1 class="titlePresentation">Hi, my name is Victor Jamet</h1>
+        <p class="contentPresentation">I am a selftaught programmer focused
+          on web development based in Spain</p>
+      </div>
+      <img class="hero__image" src="/images/content/Interface.svg" alt="interface-img">
+      
+      <div class="hero__skills">
         <div class="card">
-          <div class="card__ldBar ldBar label-center mybar" id="mibarra" data-value="50" data-preset="circle"></div>
+          <div class="card__ldBar ldBar label-center mybar" data-value="50" data-preset="circle"></div>
           <div class="card__text">HTML/CSS</div>
         </div>
-        
 
-      </section>
-      <section class="skills" id="skills">
-      </section>
-      <section class="projects" id="projects">
-        <h1>My Recent Projects </h1>
-      </section>
-      <section class="contact" id="contact">
-      </section>
-    </main>
+        <div class="card">
+          <div class="card__ldBar ldBar label-center mybar"  data-value="30" data-preset="circle"></div>
+          <div class="card__text">Javascript</div>
+        </div>
+        <div class="card">
+          <div class="card__ldBar ldBar label-center mybar"  data-value="20" data-preset="circle"></div>
+          <div class="card__text">Python</div>
+        </div>
+        <div class="card">
+          <div class="card__ldBar ldBar label-center mybar" data-value="10" data-preset="circle"></div>
+          <div class="card__text">Ux Design</div>
+        </div>
+      </div>
+      <div>
+        <span>Learn more about me</span>
+        <img src="/images/sections/hero/arrow.svg" alt="flecha">
+        <!-- ToDo: Need to do a waiting animation -->
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <h1>My Tech Stack</h1>
+    </section>
+    <section class="projects" id="projects">
+      <h1>My Recent Projects </h1>
+    </section>
+    <section class="contact" id="contact">
+      <h1>Contact me</h1>
+    </section>
+  </main>
   
   <aside class="sidebar left">       
     <ul>
