@@ -3,8 +3,7 @@
     currentDir=$(pwd) 
     echo "$currentDir"
 
-    read newPartial
-    
+    read newPartial 
 
     searchDir(){
         for existingDir in "${allPartials[@]}"; do
@@ -15,7 +14,6 @@
     #find allPartials
 
     findPartials(){
-        
             if [ -e $newPartial ]
             then
                 echo "element $newPartial"
@@ -23,7 +21,6 @@
                 echo "file is not a directory"
 
             fi
-        
     }
     allPartials="$(findPartials)"
 

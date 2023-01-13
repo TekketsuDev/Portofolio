@@ -1,83 +1,105 @@
-@use '../globals/' as g;
-.main{
-    margin: 0px auto;
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.hidden-sm {
+    display: none;
+}
+
+// grid
+
+
+$width: 98%;
+$gutter: 2%;
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+
+.container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media only screen and (min-width: $breakpoint-small) {
+        width: 80%;
+    }
+
+    @media only screen and (min-width: $breakpoint-large) {
+        width: 75%;
+        max-width: 100rem;
+    }
+}
+
+.row {
     width: 100%;
-    max-width: 1600px;
-    min-height: 100vh;
-}
-.hero, .skills, .projects, .contact{
-    height: 100vh;
-    padding: 0 70px;
-
-
-
-}
-.skills{
-    background-color: blueviolet;
-}   
-.projects{
-    background-color: green;
-}
-.contact{
-    background-color: pink;
 }
 
+.row [class^="col"] {
+    min-height: 0.125rem;
+}
 
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    width: $width;
+}
 
-.hero{
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: rgba(238, 130, 238, 0.361);
-    
-    &__image{
-        width: 380px;
-        height: 420px;
-    }
-    
-    &__text{
-        //Include font-size relative to max spacing containing
-            // clamp (min value in the range, 
-       width: 50%;
+.col-1-sm { width: (calc($width / 12)) - ($gutter * calc(11 / 1)2); }
+.col-2-sm { width: (calc($width / 6)) - ($gutter * calc(10 / 1)2); }
+.col-3-sm { width: (calc($width / 4)) - ($gutter * calc(9 / 12)); }
+.col-4-sm { width: (calc($width / 3)) - ($gutter * calc(8 / 12)); }
+.col-5-sm { width: (calc($width / calc(12 / 5))) - ($gutter * calc(7 / 12)); }
+.col-6-sm { width: (calc($width / 2)) - ($gutter * calc(6 / 12)); }
+.col-7-sm { width: (calc($width / calc(12 / 7))) - ($gutter * calc(5 / 12)); }
+.col-8-sm { width: (calc($width / calc(12 / 8))) - ($gutter * calc(4 / 12)); }
+.col-9-sm { width: (calc($width / calc(12 / 9))) - ($gutter * calc(3 / 12)); }
+.col-10-sm { width: (calc($width / calc(12 / 10))) - ($gutter * calc(2 / 12)); }
+.col-11-sm { width: (calc($width / calc(12 / 11))) - ($gutter * calc(1 / 12)); }
+.col-12-sm { width: $width; }
 
-       flex-wrap: wrap;
-        
-        
-
-    }
-
-    &__skills{
+@media only screen and (min-width: $breakpoint-med) {
+    .row {
         display: flex;
-        gap: 2rem;
+        justify-content: space-between;
     }
+    .col-1 { width: (calc($width / 12)) - ($gutter * calc(11 / 1)2); }
+    .col-2 { width: (calc($width / 6)) - ($gutter * calc(10 / 1)2); }
+    .col-3 { width: (calc($width / 4)) - ($gutter * calc(9 / 12)); }
+    .col-4 { width: (calc($width / 3)) - ($gutter * calc(8 / 12)); }
+    .col-5 { width: (calc($width / calc(12 / 5))) - ($gutter * calc(7 / 12)); }
+    .col-6 { width: (calc($width / 2)) - ($gutter * calc(6 / 12)); }
+    .col-7 { width: (calc($width / calc(12 / 7))) - ($gutter * calc(5 / 12)); }
+    .col-8 { width: (calc($width / calc(12 / 8))) - ($gutter * calc(4 / 12)); }
+    .col-9 { width: (calc($width / calc(12 / 9))) - ($gutter * calc(3 / 12)); }
+    .col-10 { width: (calc($width / calc(12 / 10))) - ($gutter * calc(2 / 12)); }
+    .col-11 { width: (calc($width / calc(12 / 11))) - ($gutter * calc(1 / 12)); }
+    .col-12 { width: $width; }
 
+    .hidden-sm {
+        display: block;
+    }
 }
-
-/*------------------------------------*\
-  #HERO-BREAKPOINTS
-\*------------------------------------*/
-
-@include g.breakpoint(small){
-    .hero{
-        background-color: blue;
-
-    }
-    .sidebar{
-        display: none;
-    }
-}
-
-/*------------------------------------*\
-  #SKILLS-BREAKPOINTS
-\*------------------------------------*/
-
-/*------------------------------------*\
-  #PROJECTS-BREAKPOINTS
-\*------------------------------------*/
-
-/*------------------------------------*\
-  #CONTACT-BREAKPOINTS
-\*------------------------------------*/

@@ -1,3 +1,4 @@
+@use '../globals/' as g;
 .container{
   display: flex;
   flex-direction: column;
@@ -5,3 +6,101 @@
   
 }
 
+.flex{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.main{
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
+}
+.hero, .skills, .projects, .contact{
+    height: 100vh;
+    padding: 0 70px;
+}
+.skills{
+    background-color: blueviolet;
+}   
+.projects{
+    background-color: green;
+}
+.contact{
+    background-color: pink;
+}
+
+
+
+.hero{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(238, 130, 238, 0.361);
+    
+    &__image{
+        width: 380px;
+        height: 420px;
+    }
+    
+    &__text{
+        //Include font-size relative to max spacing containing
+            // clamp (min value in the range, 
+        width: 100%;
+        
+        flex-wrap: wrap;
+        
+        
+
+    }
+
+    &__skills{
+        display: flex;
+        gap: 2rem;
+    }
+
+}
+
+/*------------------------------------*\
+  #HEADER-BREAKPOINTS
+\*------------------------------------*/
+@INCLUDE g.breakpoint(small){
+    .nav{
+
+    }
+}
+
+
+
+/*------------------------------------*\
+  #HERO-BREAKPOINTS
+\*------------------------------------*/
+
+@include g.breakpoint(small){
+    .hero{
+        background-color: blue;
+
+    }
+    .sidebar{
+        display: none;
+    }
+}
+
+/*------------------------------------*\
+  #SKILLS-BREAKPOINTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #PROJECTS-BREAKPOINTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #CONTACT-BREAKPOINTS
+\*------------------------------------*/

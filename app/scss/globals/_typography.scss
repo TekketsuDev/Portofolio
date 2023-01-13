@@ -1,3 +1,4 @@
+@use 'breakpoints' as g;
 :root{
     --fs-hero: 40px;
     --fs-header: 30px;
@@ -26,9 +27,40 @@ ul,li
     margin: 0;
 }
 
-.titlePresentation{
-    font-size: clamp(2.25rem, (1rem + 2vw), 3rem);
+
+/*------------------------------------*\
+  #HERO-BREAKPOINTS
+\*------------------------------------*/
+
+@include g.breakpoint(xlarge){
+    .titlePresentation{
+        font-size: clamp(2.25rem, (1rem + 2vw), 3rem);
+    }
+    .contentPresentation{
+        font-size: clamp(1rem, (1rem + 1vw), 1.5625rem);
+    }
 }
-.contentPresentation{
-    font-size: clamp(1rem, (1rem + 1vw), 1.5625rem);
+
+@include g.breakpoint (small){
+    .titlePresentation{
+        font-size: clamp(1.125rem, (1rem + 1vw), 1.25rem);
+    }
+
+    .contentPresentation{
+        font-size: clamp(0.875rem, (1rem + 1vw), 1rem);
+    }
 }
+.GreyPalette{
+    
+}
+/*------------------------------------*\
+  #SKILLS-BREAKPOINTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #PROJECTS-BREAKPOINTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #CONTACT-BREAKPOINTS
+\*------------------------------------*/
