@@ -1,10 +1,4 @@
 @use '../globals/' as g;
-.container{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  
-}
 
 .flex{
   display: flex;
@@ -14,11 +8,9 @@
 }
 
 
-.main{
-    margin: 0px auto;
-    width: 100%;
-    max-width: 1600px;
-    min-height: 100vh;
+
+.hero{
+  background-color: pink;
 }
 .hero, .skills, .projects, .contact{
     height: 100vh;
@@ -36,46 +28,25 @@
 
 
 
-.hero{
+/* .hero{
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    background-color: rgba(238, 130, 238, 0.361);
     
     &__image{
-        width: 380px;
-        height: 420px;
-    }
-    
-    &__text{
-        //Include font-size relative to max spacing containing
-            // clamp (min value in the range, 
-        width: 100%;
-        
-        flex-wrap: wrap;
-        
-        
-
+        width: auto;
+        height: auto;
     }
 
-    &__skills{
-        display: flex;
-        gap: 2rem;
-    }
-
-}
+} */
 
 /*------------------------------------*\
   #HEADER-BREAKPOINTS
 \*------------------------------------*/
-@INCLUDE g.breakpoint(small){
-    .nav{
 
-    }
-}
 
 
 
@@ -88,9 +59,7 @@
         background-color: blue;
 
     }
-    .sidebar{
-        display: none;
-    }
+
 }
 
 /*------------------------------------*\

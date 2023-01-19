@@ -32,14 +32,13 @@ ul,li
   #HERO-BREAKPOINTS
 \*------------------------------------*/
 
-@include g.breakpoint(xlarge){
     .titlePresentation{
         font-size: clamp(2.25rem, (1rem + 2vw), 3rem);
     }
     .contentPresentation{
         font-size: clamp(1rem, (1rem + 1vw), 1.5625rem);
     }
-}
+    
 
 @include g.breakpoint (small){
     .titlePresentation{
@@ -50,9 +49,7 @@ ul,li
         font-size: clamp(0.875rem, (1rem + 1vw), 1rem);
     }
 }
-.GreyPalette{
-    
-}
+
 /*------------------------------------*\
   #SKILLS-BREAKPOINTS
 \*------------------------------------*/

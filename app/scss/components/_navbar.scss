@@ -1,23 +1,108 @@
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-}
-.nav{
+@use '../util/colors' as color;
+
+.site-header{
     display: flex;
     flex-wrap: wrap;
-}
-.nav-list{
-    display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
-.nav-list > * {
-    padding: 1rem;
-}
 
 .logo{
-    font-size: 2rem;
+    max-width: 126px;
+    max-height: 83px;
+    width: 100%;
+    height: auto;
     padding: 0.5rem;
 }
+
+  
+.site-nav{
+    ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+  
+
+  
+  ul li {
+    padding: 5px;
+    margin-left: 10px;
+  }
+  
+  ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  
+}
+  
+#hamburger-icon {
+    margin: auto 0.5rem;
+    display: none;
+    cursor: pointer;
+  }
+  
+  #hamburger-icon div {
+    width: 35px;
+    height: 4px;
+    background-color: color.$background-color;
+    border-radius: 3px;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  
+  .open .bar2 {
+    opacity: 0;
+  }
+  
+  .open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+  
+  .open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 103px;
+    
+    right: 0;
+    height: calc(100vh - 103px);
+    width: 50%;
+    background-color: aqua;
+    z-index: 1;
+  }
+  
+  .mobile-menu li {
+    margin-bottom: 10px;
+  }
+  
+  @media only screen and (max-width: 750px) {
+    header nav {
+      display: none;
+    }
+  
+    #hamburger-icon {
+      display: block;
+    }
+    /* CHANGE LOCATION OF BREAKPOINT TO BREAKPOINTS*/
+    .sidebar{
+        display: none;
+    }
+    header{
+        background-color: transparent;
+    }
+  }
