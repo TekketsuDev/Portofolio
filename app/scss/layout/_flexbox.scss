@@ -4,15 +4,15 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 
 
-.hero{
-  background-color: pink;
-}
+
+
 .hero, .skills, .projects, .contact{
+    max-height: 100%;
     height: 100vh;
     padding: 0 70px;
 }

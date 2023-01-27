@@ -33,50 +33,56 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
         <ul class="mobile-menu">
-          <li><a href="/home">Home</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/about">About</a></li>
+          <li><img src="images/mobile/aboutHQ.png"><a href="#about">about</a></li>
+          <li><img src="images/mobile/skillsHQ.png"><a href="#skills">skills</a></li>
+          <li><img src="images/mobile/projectsHQ.png"><a href="#projects">projects</a></li>
+          <li><img src="images/mobile/contactHQ.png"><a href="#contact">contact</a></li>
         </ul>
       </div>
     </header>
     <div class="container"> 
     <main class="main"> 
       <section class="hero" id="about">
-        <div class="row">
+        <div class="row row--centred">
           <div class="col-9">
-            
               <h1 class="titlePresentation">Hi, my name is Victor Jamet</h1>
               <p class="contentPresentation">I am a selftaught programmer focused
                 on web development based in Spain</p>
             
           </div>
           <div class="col-5">
-            <!-- <img class="" src="/images/content/Interface.svg" alt="interface-img">    --> 
+            <div class="hero__img">
+              <img width="383px" height="418px" src="/images/content/Interface.svg" alt="interface-img">
+            </div>
           </div>
-        <div class="flex">
-          <div class="card flex">
-                <div class="card__ldBar ldBar label-center mybar" data-value="50" data-preset="circle"></div>
-                <div class="card__text">HTML/CSS</div>
-          </div>
-          <div class="card flex">
-            <div class="card__ldBar ldBar label-center mybar"  data-value="30" data-preset="circle"></div>
-            <div class="card__text">Javascript</div>
-          </div>
-          <div class="card flex">
-            <div class="card__ldBar ldBar label-center mybar"  data-value="20" data-preset="circle"></div>
-            <div class="card__text">Python</div>
-          </div>
-          <div class="card flex">
-            <div class="card__ldBar ldBar label-center mybar" data-value="10" data-preset="circle"></div>
-            <div class="card__text">Ux Design</div>
-          </div>
-        </div>    
-        <div>
-          <span class="hola">Learn more about me</span>
-          <img src="/images/sections/hero/arrow.svg" alt="flecha">
-          <!-- ToDo: Need to do a waiting animation -->
         </div>
-        
+        <div class="row">
+          
+              <div class="card">
+                    <div class=" ldBar label-center mybar" data-value="50" data-preset="circle"></div>
+                    <div class="card__text">HTML/CSS</div>
+              </div>
+              <div class="card">
+                <div class="ldBar label-center mybar"  data-value="30" data-preset="circle"></div>
+                <div class="card__text">Javascript</div>
+              </div>
+              <div class="card">
+                <div class="ldBar label-center mybar"  data-value="20" data-preset="circle"></div>
+                <div class="card__text">Python</div>
+              </div>
+              <div class="card">
+                <div class="ldBar label-center mybar" data-value="10" data-preset="circle"></div>
+                <div class="card__text">Ux Design</div>
+              </div>
+               
+          
+        </div>
+      <div class="row row--centred">
+        <div class="col-3">
+          <span class="hola">Learn more about me</span>
+          <img src="/images/sections/hero/arrow.svg" alt="flecha"> 
+        </div>
+      </div>
       </section>
       <section class="skills" id="skills">
         <h1>My Tech Stack</h1>
@@ -93,7 +99,7 @@
     <ul>
       <li>
         <a href="https://github.com/TekketsuDev">
-          <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M24.0002 0C10.747 0 0 11.0169 0 24.6076C0 35.4799 6.87679 44.7039 16.4128 47.9577C17.6123 48.1855 18.0526 47.4239 18.0526 46.7739C18.0526 46.1872 18.0304 44.2487 18.02 42.1925C11.3431 43.6811 9.93424 39.2891 9.93424 39.2891C8.84249 36.4448 7.26945 35.6885 7.26945 35.6885C5.09191 34.1613 7.43359 34.1926 7.43359 34.1926C9.84363 34.3662 11.1126 36.7285 11.1126 36.7285C13.2532 40.4904 16.7272 39.4028 18.0967 38.7741C18.3121 37.1836 18.9341 36.0981 19.6205 35.4836C14.2897 34.8613 8.6859 32.7513 8.6859 23.3224C8.6859 20.6358 9.62345 18.4406 11.1587 16.7174C10.9095 16.0976 10.088 13.5947 11.3912 10.2052C11.3912 10.2052 13.4066 9.54386 17.993 12.7276C19.9074 12.1824 21.9606 11.9089 24.0002 11.8996C26.0398 11.9089 28.0946 12.1824 30.0126 12.7276C34.5934 9.54386 36.606 10.2052 36.606 10.2052C37.9124 13.5947 37.0905 16.0976 36.8413 16.7174C38.3801 18.4406 39.3113 20.6358 39.3113 23.3224C39.3113 32.7737 33.6968 34.8548 28.3525 35.464C29.2133 36.2276 29.9804 37.7252 29.9804 40.021C29.9804 43.3135 29.9526 45.9634 29.9526 46.7739C29.9526 47.4288 30.3846 48.1961 31.6011 47.9544C41.132 44.697 48 35.4762 48 24.6076C48 11.0169 37.2546 0 24.0002 0" fill="#5A5A5A"/>
             <path d="M9.16085 35.1623C9.10809 35.2833 8.92085 35.3196 8.75027 35.2365C8.57652 35.157 8.47893 34.992 8.53526 34.8706C8.58683 34.7459 8.77447 34.7112 8.94782 34.7947C9.12197 34.8742 9.22115 35.0408 9.16085 35.1623Z" fill="#5A5A5A"/>
             <path d="M10.1312 36.263C10.0169 36.3707 9.79358 36.3207 9.64204 36.1504C9.48534 35.9805 9.45599 35.7534 9.57182 35.644C9.68964 35.5363 9.90624 35.5867 10.0633 35.7566C10.22 35.9285 10.2506 36.154 10.1312 36.263Z" fill="#5A5A5A"/>
