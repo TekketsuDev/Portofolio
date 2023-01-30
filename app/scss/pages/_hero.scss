@@ -1,6 +1,58 @@
-.hero{
-    background-color: pink;
+@use '../globals/' as g;
+
+.about{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: rgb(139, 214, 139);
+    height: 100vh;
+
+    /* Box Model */
+    
+  
   }
+  
+.hero{
+    display: flex;
+    
+    margin-top: 80px;
+
+}
+
   .hero__img{
     text-align: center;
+  }
+  .hero__text{
+    width: 100%;
+  }
+
+  .info-block{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+
+  }
+
+  .info-block--image{
+    display: block;
+  }
+
+  .card-group{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+  
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+  }
+
+  @include g.breakpoint(medium){
+    .hero{
+      flex-flow: column wrap;
+    }
   }

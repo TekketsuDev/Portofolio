@@ -4,17 +4,44 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-  justify-content: space-between;
+  
+}
+
+.flex{
+  
+
+/*------------------------------------*\
+  #POSITIONING
+\*------------------------------------*/
+  &--start {
+    justify-content: flex-start;
+  }
+  &--center {
+    justify-content: center;
+  }
+  &--end {
+    justify-content: flex-end;
+  }
+
+  &--space-between{
+    justify-content: space-between;
+  }
+
+  &--top {
+    align-items: flex-start;
+  }
+  &--middle {
+    align-items: center;
+  }
+  &--bottom {
+    align-items: flex-end;
+  }
 }
 
 
 
-
-
-.hero, .skills, .projects, .contact{
-    max-height: 100%;
-    height: 100vh;
-    padding: 0 70px;
+.hero {
+  background-color: rgb(93, 160, 204);
 }
 .skills{
     background-color: blueviolet;

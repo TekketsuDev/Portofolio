@@ -1,15 +1,9 @@
 @use '../util' as u;
 
-.card {
-  display: flex;
-  align-items: center;
-  margin: clamp(10px, 100%, 20px);
-}
+
 
 .ldBar {
     position: relative;
-    min-width: 75px;
-    min-height: 75px;
   }
   .ldBar.label-center > .ldBar-label {
     position: absolute;

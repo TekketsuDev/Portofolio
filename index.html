@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <header class="site-header">
+  <header class="site-header">
       <div class="site-logo">
         <img class="logo" alt="cat-logo" src="/images/navbar/catlogoDEF.png" >     
       </div>
@@ -39,50 +39,58 @@
           <li><img src="images/mobile/contactHQ.png"><a href="#contact">contact</a></li>
         </ul>
       </div>
-    </header>
-    <div class="container"> 
+  </header>
+  <div class="container"> 
     <main class="main"> 
-      <section class="hero" id="about">
-        <div class="row row--centred">
-          <div class="col-9">
+      <section class="about" id="about">
+        <div class="hero">
+          <div class="hero__text">
               <h1 class="titlePresentation">Hi, my name is Victor Jamet</h1>
               <p class="contentPresentation">I am a selftaught programmer focused
                 on web development based in Spain</p>
-            
           </div>
-          <div class="col-5">
             <div class="hero__img">
-              <img width="383px" height="418px" src="/images/content/Interface.svg" alt="interface-img">
+              <img min-width="383px" min-height="418px" src="/images/content/Interface.svg" alt="interface-img">
             </div>
+        </div>
+        
+        <div class="card-group">
+          <div class="card">
+                <div class=" ldBar label-center mybar" data-value="50" data-preset="circle"></div>
+                <div class="card__text">HTML/CSS</div>
+          </div>
+          <div class="card">
+            <div class="ldBar label-center mybar"  data-value="30" data-preset="circle"></div>
+            <div class="card__text">Javascript</div>
+          </div>
+          <div class="card">
+            <div class="ldBar label-center mybar"  data-value="20" data-preset="circle"></div>
+            <div class="card__text">Python</div>
+          </div>
+          <div class="card">
+            <div class="ldBar label-center mybar" data-value="10" data-preset="circle"></div>
+            <div class="card__text">Ux Design</div>
           </div>
         </div>
-        <div class="row">
-          
-              <div class="card">
-                    <div class=" ldBar label-center mybar" data-value="50" data-preset="circle"></div>
-                    <div class="card__text">HTML/CSS</div>
-              </div>
-              <div class="card">
-                <div class="ldBar label-center mybar"  data-value="30" data-preset="circle"></div>
-                <div class="card__text">Javascript</div>
-              </div>
-              <div class="card">
-                <div class="ldBar label-center mybar"  data-value="20" data-preset="circle"></div>
-                <div class="card__text">Python</div>
-              </div>
-              <div class="card">
-                <div class="ldBar label-center mybar" data-value="10" data-preset="circle"></div>
-                <div class="card__text">Ux Design</div>
-              </div>
-               
-          
+          <div class="info-block">
+              <a class="info-block--image" href="#about" >
+                <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_347_888)">
+                    <path d="M31.4925 36.5075L51 55.9725L70.5075 36.5075L76.5 42.5L51 68L25.5 42.5L31.4925 36.5075Z" fill="#AA7051"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_347_888">
+                    <rect width="102" height="102" fill="white" transform="matrix(0 1 -1 0 102 0)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+              </a>
+            </button>
+            <span class="hola">Learn more about me</span>
         </div>
-      <div class="row row--centred">
-        <div class="col-3">
-          <span class="hola">Learn more about me</span>
-          <img src="/images/sections/hero/arrow.svg" alt="flecha"> 
-        </div>
-      </div>
+      
+       
+        
       </section>
       <section class="skills" id="skills">
         <h1>My Tech Stack</h1>
@@ -92,6 +100,35 @@
       </section>
       <section class="contact" id="contact">
         <h1>Contact me</h1>
+        <form>
+          <div class="row">
+            <div class="col col--6">
+              <label for="exampleNameEmailInput">Name</label>
+              <input class="" type="email" placeholder=" " id="exampleEmailInput">
+            </div>
+            <div class="col col--6">
+              <label for="exampleNameEmailInput">Email</label>
+              <input class="" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+            </div>
+            <div class="col col--6">
+              <label for="topicInput">Topic</label>
+              <select id="topicInput" placeholder="hola">
+                <option value="Option 1">Mobile App</option>
+                <option value="Option 2">Website</option>
+                <option value="Option 3">Website (Larger Project)</option>
+                <option value="Option 4">Videogame</option>
+                <option value="Option 5">Other</option>
+              </select>
+            </div>
+          </div>
+          <label for="exampleMessage">Message</label>
+          <textarea class="u-full-width" placeholder="Hi Karlo …" id="exampleMessage"></textarea>
+          <label class="sample__send-yourself-copy">
+            <input type="checkbox">
+            <span class="label-body">Send a copy to yourself</span>
+          </label>
+          <input class="btn btn--primary" type="submit" value="Submit">
+        </form>
       </section>
     </main>
   </div>
@@ -180,51 +217,4 @@
 
   </body>
   </html>
-  <!-- 
-     <div class="wrapper">
-      <header class="header">
-        <div>
-        <img class="logo" alt="cat-logo" src="/images/navbar/catlogoDEF.png" >
-        </div>
-        <nav>
-          <ul class="nav-list">
-            <li><a href="#about">about</a></li>
-            <li><a href="#skills">skills</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
-          </ul>
-      </nav>   
-    </header>
-      <input id="hamburger" type='checkbox' class="hamburger-checkbox">
-      <label for="hamburger" class="hamburger-label" role="button" aria-labelledby="menu">&#xf0c9;</label>
-      
-      <nav role="navigation" class="sidebar">
-        <ul class="menu">
-          <li>Home</li>
-          <li>Publications</li>
-          <li>Shop</li>
-          <li>Your Account</li>
-          <li>Contact Us</li>
-        </ul>
-      </nav>
-    
-      <main role="main" class="content">
-        <h1>Pure CSS off-canvas menu with flexbox</h1>
-        <p>This page uses <a href="http://caniuse.com/#feat=flexbox">flexbox</a> to control the layout so that when the menu becomes visible, the content area can resize to fit the remaining width in the viewport, instead of overflowing the viewport and getting cut off on the right side, as happens with most off-canvas menus. the content area can resize to fit the remaining width in the viewport, instead of overflowing the viewport and getting cut off on the right side, as happens with most off-canvas menus.</p>
-        <p>The menu's visibility is toggled without JavaScript using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>.</p>
-      </main>
-      
-        <input id="hamburger-right" type='checkbox' class="hamburger-right-checkbox">
-      <label for="hamburger-right" class="hamburger-right-label" role="button" aria-labelledby="menu">&#xf0c9;</label>
-      
-        <nav role="navigation" class="sidebar-right">
-        <ul class="menu-right">
-          <li>Home</li>
-          <li>Publications</li>
-          <li>Shop</li>
-          <li>Your Account</li>
-          <li>Contact Us</li>
-        </ul>
-      </nav>
-    
-    </div> -->
+  

@@ -1,5 +1,4 @@
 @use '../util/colors' as color;
-
 .site-header{
     display: flex;
     flex-wrap: wrap;
@@ -109,3 +108,9 @@
     }
 
   }
+
+
+  .site-header{
+    background-color: color.$nav-background-color;
+  }
+  

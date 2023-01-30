@@ -33,14 +33,14 @@ ul,li
 \*------------------------------------*/
 
     .titlePresentation{
-        font-size: clamp(2.25rem, (1rem + 2vw), 3rem);
+        font-size: clamp(2.25rem, (1rem + 4vw), 3rem);
     }
     .contentPresentation{
         font-size: clamp(1rem, (1rem + 1vw), 1.5625rem);
     }
     
 
-@include g.breakpoint (small){
+/* @include g.breakpoint (small){
     .titlePresentation{
         font-size: clamp(1.125rem, (1rem + 1vw), 1.25rem);
     }
@@ -48,7 +48,7 @@ ul,li
     .contentPresentation{
         font-size: clamp(0.875rem, (1rem + 1vw), 1rem);
     }
-}
+} */
 
 /*------------------------------------*\
   #SKILLS-BREAKPOINTS
