@@ -1,3 +1,6 @@
+@use '../globals/' as break;
+
+
 
 .left {
     text-align: left;
@@ -29,23 +32,51 @@ $width: 98%;
 $gutter: 2%;
 $breakpoint-small: 33.75em; // 540px
 $breakpoint-med: 45em; // 720px
-$breakpoint-large: 60em; // 960px
+$breakpoint-large: 60em; // 960px 
 
 .container {
     width: 100%;
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
-
-/*     @media only screen and (max-width: $breakpoint-small) {
-        width: 80%;
+    .main{
+        margin: 0 70px;
     }
+     @media only screen and (max-width: 46.875em) {
+        width: 90%;
+        .main{
+            margin: 0;
+        }
+    }
+}
+.main > *{
+    height: 100vh;
+}
 
+.grid{
+    display: grid;
+    gap: clamp(1rem, 1vh, 6.25rem);
+    
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    
+    @include break.breakpoint(medium){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    @include break.breakpoint(xsmall){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* 
     @media only screen and (max-width: $breakpoint-large) {
         width: 100%;
         max-width: 1600px;
-    } */
-}
+    } 
+
 
 .row {
     width: 100%;
@@ -108,3 +139,4 @@ $breakpoint-large: 60em; // 960px
         display: block;
     }
 }
+ */

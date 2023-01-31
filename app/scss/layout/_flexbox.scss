@@ -8,8 +8,6 @@
 }
 
 .flex{
-  
-
 /*------------------------------------*\
   #POSITIONING
 \*------------------------------------*/
@@ -22,11 +20,11 @@
   &--end {
     justify-content: flex-end;
   }
-
   &--space-between{
     justify-content: space-between;
   }
 
+  
   &--top {
     align-items: flex-start;
   }
@@ -38,56 +36,9 @@
   }
 }
 
-
-
-.hero {
-  background-color: rgb(93, 160, 204);
-}
-.skills{
-    background-color: blueviolet;
-}   
-.projects{
-    background-color: green;
-}
-.contact{
-    background-color: pink;
-}
-
-
-
-/* .hero{
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    
-    &__image{
-        width: auto;
-        height: auto;
-    }
-
-} */
-
 /*------------------------------------*\
   #HEADER-BREAKPOINTS
 \*------------------------------------*/
-
-
-
-
-/*------------------------------------*\
-  #HERO-BREAKPOINTS
-\*------------------------------------*/
-
-@include g.breakpoint(small){
-    .hero{
-        background-color: blue;
-
-    }
-
-}
 
 /*------------------------------------*\
   #SKILLS-BREAKPOINTS

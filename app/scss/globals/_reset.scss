@@ -11,9 +11,12 @@ html {
   /**
    * Remove the margin in all browsers.
    */
-  
+
+
   body {
     margin: 0;
+    width: 100%;
+    min-height: 100%;
   }
   
   /**
@@ -22,6 +25,7 @@ html {
   
   main {
     display: block;
+    
   }
   
   /**
@@ -136,7 +140,8 @@ html {
   
   img {
     border-style: none;
-
+    max-width: 100%;
+    height: auto;
   }
   
   /* Forms

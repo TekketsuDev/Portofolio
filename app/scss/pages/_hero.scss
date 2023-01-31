@@ -1,4 +1,4 @@
-@use '../globals/' as g;
+@use '../globals/' as break;
 
 .about{
     display: flex;
@@ -6,26 +6,36 @@
 
     align-items: center;
 
-    background-color: rgb(139, 214, 139);
-    height: 100vh;
+    /* Z-index mobile menu conflicts with background color of section */
+    //background-color: rgb(139, 214, 139);
 
-    /* Box Model */
-    
-  
   }
   
 .hero{
     display: flex;
-    
-    margin-top: 80px;
+    align-items: center;
+    margin-top: 50px;
 
 }
+  .hero {
+  background-color: rgb(93, 160, 204);
+  }
+  .skills{
+    background-color: blueviolet;
+  }   
+  .projects{
+    background-color: green;
+  }
+  .contact{
+    background-color: pink;
+  }
+
 
   .hero__img{
     text-align: center;
   }
   .hero__text{
-    width: 100%;
+    
   }
 
   .info-block{
@@ -51,8 +61,23 @@
     align-items: center;
   }
 
-  @include g.breakpoint(medium){
+  
+/*------------------------------------*\
+  #HERO-BREAKPOINTS
+\*------------------------------------*/
+
+  @include break.breakpoint(medium){
     .hero{
       flex-flow: column wrap;
     }
   }
+
+  @include break.breakpoint(xsmall){
+    .info-block__text{
+      display: none;
+    }
+  }
+
+
+  
+

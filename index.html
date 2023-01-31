@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <header class="site-header">
+  <header id=site-header class="site-header">
       <div class="site-logo">
         <img class="logo" alt="cat-logo" src="/images/navbar/catlogoDEF.png" >     
       </div>
@@ -40,7 +40,7 @@
         </ul>
       </div>
   </header>
-  <div class="container"> 
+  <div id="content" class="container"> 
     <main class="main"> 
       <section class="about" id="about">
         <div class="hero">
@@ -50,11 +50,11 @@
                 on web development based in Spain</p>
           </div>
             <div class="hero__img">
-              <img min-width="383px" min-height="418px" src="/images/content/Interface.svg" alt="interface-img">
+              <img src="/images/content/Interface.svg" alt="interface-img">
             </div>
         </div>
         
-        <div class="card-group">
+        <div class="grid">
           <div class="card">
                 <div class=" ldBar label-center mybar" data-value="50" data-preset="circle"></div>
                 <div class="card__text">HTML/CSS</div>
@@ -73,7 +73,7 @@
           </div>
         </div>
           <div class="info-block">
-              <a class="info-block--image" href="#about" >
+              <a class="info-block__image" href="#about" >
                 <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_347_888)">
                     <path d="M31.4925 36.5075L51 55.9725L70.5075 36.5075L76.5 42.5L51 68L25.5 42.5L31.4925 36.5075Z" fill="#AA7051"/>
@@ -86,7 +86,7 @@
                 </svg>
               </a>
             </button>
-            <span class="hola">Learn more about me</span>
+            <div class="info-block__text">Learn more about me</div>
         </div>
       
        
@@ -94,6 +94,12 @@
       </section>
       <section class="skills" id="skills">
         <h1>My Tech Stack</h1>
+        <div class="editor">
+          <nav class="editor-nav">
+            
+          </nav>
+
+        </div>
       </section>
       <section class="projects" id="projects">
         <h1>My Recent Projects </h1>

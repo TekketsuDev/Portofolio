@@ -1,4 +1,4 @@
-@use 'breakpoints' as g;
+@use 'breakpoints' as break;
 :root{
     --fs-hero: 40px;
     --fs-header: 30px;
@@ -33,14 +33,27 @@ ul,li
 \*------------------------------------*/
 
     .titlePresentation{
-        font-size: clamp(2.25rem, (1rem + 4vw), 3rem);
+        font-size: clamp(19px, 8vmin, 50px);
     }
     .contentPresentation{
-        font-size: clamp(1rem, (1rem + 1vw), 1.5625rem);
+        font-size: clamp(14px, (1rem + 0.5vh), 25px);
     }
-    
 
-/* @include g.breakpoint (small){
+   @include break.breakpoint (large){
+    .hero__img{
+        width: 40%;
+    }
+    .hero__text{
+        width: 60%;
+    }
+   }
+
+   @include break.breakpoint(small){
+
+   }
+
+
+/* @include break.breakpoint (small){
     .titlePresentation{
         font-size: clamp(1.125rem, (1rem + 1vw), 1.25rem);
     }
