@@ -1,31 +1,5 @@
 @use '../globals/' as break;
 
-
-
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-
-.center {
-    margin-right: auto;
-    margin-left: auto;
-
-    text-align: center;
-}
-
-.justify {
-    text-align: justify;
-}
-
-
-.hidden-sm {
-    display: none;
-}
-
 // grid
 
 $width: 98%;
@@ -50,13 +24,13 @@ $breakpoint-large: 60em; // 960px
     }
 }
 .main > *{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .grid{
     display: grid;
-    gap: clamp(1rem, 1vh, 6.25rem);
     
+    /* Layout */
     
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -69,6 +43,12 @@ $breakpoint-large: 60em; // 960px
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
+    /* Positioning */
+    justify-content: center;
+    align-items: center;
+    /* Border-Box */
+    gap: clamp(1rem, 1vh, 6.25rem);
+
 }
 
 /* 

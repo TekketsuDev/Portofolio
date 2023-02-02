@@ -9,7 +9,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("site-header").style.top = "0";
   } else {
-    document.getElementById("site-header").style.top = "-103px";
+    document.getElementById("site-header").style.top = "-86px";
   }
   prevScrollpos = currentScrollPos;
 }
