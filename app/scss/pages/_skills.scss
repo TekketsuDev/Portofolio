@@ -1,3 +1,15 @@
 .skills{
     height: 100vh;
 }
+.editor{
+    width: 100%;
+    height: auto;
+}
+.editor-nav{
+    display: flex;
+    flex-direction: column;
+}
+.editor-nav > div{
+    display: inline-block;
+
+}
