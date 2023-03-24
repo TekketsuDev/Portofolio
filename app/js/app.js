@@ -14,24 +14,41 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-
-// Get the container element
-var btnContainer = document.getElementById("myDIV");
-
-// Get all buttons with class="btn" inside the container
-var btns = btnContainer.getElementsByClassName("btn");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-
-    // If there's no active class
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", "");
-    }
-
-    // Add the active class to the current/clicked button
-    this.className += " active";
-  });
+let code = [
+  "import React from 'react';",
+  "import ReactDOM from 'react-dom';",
+  " ",
+  "class App extends React.Component {",
+  "  render() {",
+  "    return(",
+  "      <div>",
+  "        Hello, World!|",
+  "      </div>",
+  "    )",
+  "  }",
+  "}",
+];
+let codeArea = document.getElementById('code');
+let lineNumberArea = document.getElementById('line-number');
+let ul, li, p;
+ul = document.createElement('ul')
+code.map(line => {  
+  li = document.createElement('li')
+  p = document.createElement('p')
+  p.innerText = line
+  p.className = 'preserve-whitespace'
+  if (line.indexOf('|') > -1) {
+    p.innerHTML = line.split('|').join('<span class="cursor">|</span>')
+  }
+  li.appendChild(p)
+  ul.appendChild(li)
+})
+codeArea.appendChild(ul)
+ul = document.createElement('ul')
+for (let i=0; i<code.length + 1; i++){
+  li = document.createElement('li')
+  li.innerText = `${i+1}`
+  console.log(li)
+  ul.appendChild(li)
 }
+lineNumberArea.appendChild(ul)
