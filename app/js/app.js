@@ -31,9 +31,24 @@ const handleMenu = (menu) => {
 
 };
   
-window.addEventListener('scroll', () => {
-  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+
+
+
+window.addEventListener("resize", function(event) {
+  let menu = document.getElementById("hamburger-icon")
+  if(window.innerWidth > 750 && menu.classList.contains('open')){
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    document.getElementById('hamburger-icon').classList.remove('open');
+  }
 });
+
+/* window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+}); */
 
 
 
@@ -80,7 +95,6 @@ ul = document.createElement('ul')
 for (let i=0; i<code.length + 1; i++){
   li = document.createElement('li')
   li.innerText = `${i+1}`
-  console.log(li)
   ul.appendChild(li)
 }
 lineNumberArea.appendChild(ul)
