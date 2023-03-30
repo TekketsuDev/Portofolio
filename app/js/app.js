@@ -46,6 +46,27 @@ window.addEventListener("resize", function(event) {
   }
 });
 
+
+/* 
+  ACCORDION MENU FILE SELECTOR
+*/
+document.getElementById
+addEventListener("click", checkLanguageInformation);
+
+function checkLanguageInformation(){
+  for(let i = 1; i < 4; i++){
+
+    
+    let currentID = "rd" + i;  
+    console.log(currentID)
+    if(document.getElementById(currentID).checked = true){
+
+    }
+    
+  
+  }
+}
+
 /* window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
 }); */
