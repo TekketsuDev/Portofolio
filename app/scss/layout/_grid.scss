@@ -23,29 +23,26 @@ $breakpoint-large: 60em; // 960px
         }
     }
 }
-.main > *{
-    min-height: 100vh;
-}
 
 .grid{
     display: grid;
     
     /* Layout */
     
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.9fr 1fr;
     grid-template-rows: 1fr;
-    
-    @include break.breakpoint(medium){
+    justify-items: center;
+    @include break.breakpoint(large){
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    @include break.breakpoint(xsmall){
+    @include break.breakpoint(medium){
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
     /* Positioning */
-    justify-content: center;
-    align-items: center;
+   
+    
     /* Border-Box */
     gap: clamp(1rem, 1vh, 6.25rem);
 

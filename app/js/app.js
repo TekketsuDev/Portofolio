@@ -46,26 +46,70 @@ window.addEventListener("resize", function(event) {
   }
 });
 
+ 
+let options = {
+  startAngle: -1.55,
+  size: 100,
+  value: 0.95,
+  fill: {gradient: ['#AA7051', '#CA8560']}
+}
+$(".circle .bar").circleProgress(options).on('circle-animation-progress',
+function(event, progress, stepValue){
+  $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+});
+$(".js .bar").circleProgress({
+  value: 0.90
+});
+$(".python .bar").circleProgress({
+  value: 0.50
+});
+$(".ux .bar").circleProgress({
+  value: 0.20
+});
+
 
 /* 
   ACCORDION MENU FILE SELECTOR
 */
-document.getElementById
-addEventListener("click", checkLanguageInformation);
+/* document.getElementById("accordion-folders").addEventListener("click", checkLanguageInformation);
 
 function checkLanguageInformation(){
   for(let i = 1; i < 4; i++){
 
     
-    let currentID = "rd" + i;  
-    console.log(currentID)
-    if(document.getElementById(currentID).checked = true){
-
-    }
+    let currentID = "rd" + i;
     
   
-  }
+    if(document.getElementById(currentID).checked == true){
+      console.log(currentID);
+      let element = document.getElementById("buenas")
+      element.classList.add("active");
+    }
+   
+  
+  } 
 }
+*/
+ 
+
+var accordion = document.getElementById("accordion-folders");
+var language = accordion.getElementsByClassName("language"); 
+for (var i = 0; i < language.length; i++) {
+  language[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  console.log(this.className);
+  });
+}
+
+var current = document.getElementById("active");
+var fileSelected = current.getElementsByClassName("language-content").firstElementChild;
+current.children.addEventListener("click", function(file) {
+
+});
+
+
 
 /* window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
@@ -81,7 +125,7 @@ function checkLanguageInformation(){
   **
 */
 
-
+/* 
 let code = [
   "import React from 'react';",
   "import ReactDOM from 'react-dom';",
@@ -119,3 +163,11 @@ for (let i=0; i<code.length + 1; i++){
   ul.appendChild(li)
 }
 lineNumberArea.appendChild(ul)
+ */
+
+/* 
+
+  CARD EFFECT
+
+*/
+

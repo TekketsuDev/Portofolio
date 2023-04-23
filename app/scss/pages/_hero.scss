@@ -15,7 +15,6 @@
 .hero{
     display: flex;
     align-items: center;
-
 }
  
   .projects{
@@ -38,34 +37,21 @@
     display: block;
   }
 
-  .card-group{
-   display: flex;
-   flex-wrap: wrap;
-   gap: 1rem;
-  
-  }
 
-  .card {
-    display: flex;
-    align-items: center;
-    margin: 0 0.5rem;
-    min-width: 89px;
-    min-height: 89px;
-  }
 
   
 /*------------------------------------*\
   #HERO-BREAKPOINTS
 \*------------------------------------*/
 
-  @include break.breakpoint(medium){
+  @include break.breakpoint(large){
     .hero{
       flex-flow: column wrap;
     }
     
   }
 
-  @include break.breakpoint(xsmall){
+  @include break.breakpoint(medium){
     .info-block__text{
       display: none;
     }
