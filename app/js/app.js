@@ -69,105 +69,72 @@ $(".ux .bar").circleProgress({
 
 
 /* 
-  ACCORDION MENU FILE SELECTOR
+  TECK STACK
+
+  CODE EDITOR
+
 */
-/* document.getElementById("accordion-folders").addEventListener("click", checkLanguageInformation);
+const primaryMenu = document.getElementById("accordion-folders");
+const secondaryMenu = document.getElementById("code-folders");
+const fileLanguages = ["html", "css", "figma", "python", "javascript"];
+// Add click event listeners to primary menu links
+const links = primaryMenu.querySelectorAll("li");
 
-function checkLanguageInformation(){
-  for(let i = 1; i < 4; i++){
-
+links.forEach(link => {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
     
-    let currentID = "rd" + i;
+    const selectedOption = link.dataset.value;
     
-  
-    if(document.getElementById(currentID).checked == true){
-      console.log(currentID);
-      let element = document.getElementById("buenas")
-      element.classList.add("active");
+    // Remove active class from all links in the primary menu
+    links.forEach(link => link.classList.remove("active"));
+    
+    // Add active class to the selected link in the primary menu
+    link.classList.add("active");
+    
+    // Clear existing options in the secondary menu
+    for (var i = 0; i < fileLanguages.length; i++) {
+      if (selectedOption == fileLanguages[i] ) {
+        fruits[i].style.display = "block";
+      } else {
+        fruits[i].style.display = "none";
+      }
     }
-   
-  
-  } 
+    // Add options based on the selected option in the primary menu
+    if (selectedOption === "language1") {
+    } else if (selectedOption === "language2") {
+      console.log('holiwis');
+    } else if (selectedOption === "language3") {
+      
+    } else if (selectedOption === "language4") {
+     
+    } else if (selectedOption === "language5") {
+      
 }
-*/
- 
+  });
+});
 
+// Add active class to the first link in the primary menu on page load
+links[0].classList.add("active");
+
+// Trigger click event on the first link to populate the secondary menu
+links[0].click();
+
+/* 
 var accordion = document.getElementById("accordion-folders");
 var language = accordion.getElementsByClassName("language"); 
 for (var i = 0; i < language.length; i++) {
+   
+    ACCORDION MENU
+  
   language[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
+  var current = accordion.getElementsByClassName("active");
+  var data 
+  
   current[0].className = current[0].className.replace(" active", "");
   this.className += " active";
-  console.log(this.className);
   });
-}
-
-var current = document.getElementById("active");
-var fileSelected = current.getElementsByClassName("language-content").firstElementChild;
-current.children.addEventListener("click", function(file) {
-
-});
-
-
-
-/* window.addEventListener('scroll', () => {
-  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-}); */
-
-
-
-/* 
-  **
-
-  CODE SKILLS 
-
-  **
-*/
-
-/* 
-let code = [
-  "import React from 'react';",
-  "import ReactDOM from 'react-dom';",
-  " ",
-  "class App extends React.Component {",
-  "  render() {",
-  "    return(",
-  "      <div>",
-  "        Hello, World!|",
-  "      </div>",
-  "    )",
-  "  }",
-  "}",
-];
-let codeArea = document.getElementById('code');
-let lineNumberArea = document.getElementById('line-number');
-let ul, li, p;
-ul = document.createElement('ul')
-code.map(line => {  
-  li = document.createElement('li')
-  p = document.createElement('p')
-  p.innerText = line
-  p.className = 'preserve-whitespace'
-  if (line.indexOf('|') > -1) {
-    p.innerHTML = line.split('|').join('<span class="cursor">|</span>')
   }
-  li.appendChild(p)
-  ul.appendChild(li)
-})
-codeArea.appendChild(ul)
-ul = document.createElement('ul')
-for (let i=0; i<code.length + 1; i++){
-  li = document.createElement('li')
-  li.innerText = `${i+1}`
-  ul.appendChild(li)
-}
-lineNumberArea.appendChild(ul)
+
+
  */
-
-/* 
-
-  CARD EFFECT
-
-*/
-

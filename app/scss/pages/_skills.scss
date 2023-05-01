@@ -20,11 +20,11 @@
     width: 100%;
     
 }
-.code-files{
+.code-folders{
     display: flex;
     gap: 8px;
 }
-.code-files li{
+.code-folders li{
   display: inline-block;
 }
 .code-content{
@@ -120,4 +120,5 @@
 .editor-status{
     display: flex;
     flex-direction: row;
+    
 }
