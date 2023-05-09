@@ -24,7 +24,7 @@
     display: flex;
     gap: 8px;
 }
-.code-folders li{
+.code-folders div{
   display: inline-block;
 }
 .code-content{
@@ -121,4 +121,18 @@
     display: flex;
     flex-direction: row;
     
+}
+
+.code-folders > * {
+  display: none;
+}
+.activeFile{
+  display: block;
+}
+.file{
+  cursor: pointer;
+  color: rgba($color: #ffff, $alpha: 0.7);
+}
+.selected{
+  color: white;
 }

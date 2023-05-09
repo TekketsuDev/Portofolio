@@ -75,66 +75,131 @@ $(".ux .bar").circleProgress({
 
 */
 const primaryMenu = document.getElementById("accordion-folders");
-const secondaryMenu = document.getElementById("code-folders");
-const fileLanguages = ["html", "css", "figma", "python", "javascript"];
-// Add click event listeners to primary menu links
-const links = primaryMenu.querySelectorAll("li");
+const secondaryMenu = document.getElementById("code-folders").children;
+const clickLabel = document.querySelectorAll('.language-label');
 
-links.forEach(link => {
-  link.addEventListener("click", function(event) {
-    event.preventDefault();
+const filesMenu = document.querySelectorAll(".language-content");
+
+ 
+// loop through the labels and add a click event listener to each one
+clickLabel.forEach((label, index) => {
+  label.addEventListener('click', e => {
+    // remove the "active" class from all li elements with class name of "language"
+    document.querySelectorAll('.language').forEach(li => {
+      li.classList.remove('active');
+    });
+    document.querySelectorAll(".file").forEach(el => {
+      el.classList.remove('selected')
+    });
+    console.log(document.querySelectorAll(".file").forEach(el => {
+      el.classList.remove('selected')
+    }));
+    // add the "active" class to the parent li element of the clicked label
+    label.parentNode.classList.add('active');
+
     
-    const selectedOption = link.dataset.value;
+      let allSibling = label.nextElementSibling.querySelectorAll("div")
+      allSibling.forEach(file =>{
+        file.addEventListener('click', c =>{
+         
+          if(label.parentNode.classList.contains('active')){
+            document.querySelectorAll(".file").forEach(el => {
+              el.classList.remove('selected')
+            });
+            file.classList.add('selected');
+         
+          }
+        });
+      })
+  
+
+
+
     
-    // Remove active class from all links in the primary menu
-    links.forEach(link => link.classList.remove("active"));
-    
-    // Add active class to the selected link in the primary menu
-    link.classList.add("active");
-    
-    // Clear existing options in the secondary menu
-    for (var i = 0; i < fileLanguages.length; i++) {
-      if (selectedOption == fileLanguages[i] ) {
-        fruits[i].style.display = "block";
-      } else {
-        fruits[i].style.display = "none";
+    secondaryMenu.item(index).classList.add("activeFile");
+    for (let i = 0; i < secondaryMenu.length; i++) {
+      if(secondaryMenu.item(i) != secondaryMenu.item(index) ){
+        
+        secondaryMenu.item(i).classList.remove("activeFile");
       }
     }
-    // Add options based on the selected option in the primary menu
-    if (selectedOption === "language1") {
-    } else if (selectedOption === "language2") {
-      console.log('holiwis');
-    } else if (selectedOption === "language3") {
-      
-    } else if (selectedOption === "language4") {
-     
-    } else if (selectedOption === "language5") {
-      
-}
   });
 });
 
-// Add active class to the first link in the primary menu on page load
-links[0].classList.add("active");
+clickLabel[0].click();
+console.log(document.querySelectorAll(".file"));
 
-// Trigger click event on the first link to populate the secondary menu
-links[0].click();
 
-/* 
-var accordion = document.getElementById("accordion-folders");
-var language = accordion.getElementsByClassName("language"); 
-for (var i = 0; i < language.length; i++) {
+var stackedCardSlide = new stackedCards({
+    selector: '.mycards',
+	 	layout: "slide",
+	 	transformOrigin: "center"   });
+stackedCardSlide.init();
+/* console.log(clickLabel); */
+/* addGlobalEventListener('click', "label.language-label", e => {
+ 
+}) */
+
+/* const primaryMenu = document.getElementById("accordion-folders");
+const secondaryMenu = document.getElementById("code-folders").children;
+const languages = primaryMenu.querySelectorAll("li");
+
+ 
+const allfiles = document.querySelectorAll("div.language-content");
+languages.forEach((language, index) => {
+
+  let currentLabel = language.querySelectorAll(".language-label");
+  console.log(language);
+  language.addEventListener("click", function(event) {
+    event.preventDefault();
+
+
+    languages.forEach(language => language.classList.remove("active"));
    
-    ACCORDION MENU
-  
-  language[i].addEventListener("click", function() {
-  var current = accordion.getElementsByClassName("active");
-  var data 
-  
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
+
+    language.classList.add("active");
+
+
+    secondaryMenu.item(index).classList.add("activeFile");
+    
+
+
+    // CHANGE ACTIVE SECONDARY MENU
+    for (let i = 0; i < secondaryMenu.length; i++) {
+      if(secondaryMenu.item(i) != secondaryMenu.item(index) ){
+        
+        secondaryMenu.item(i).classList.remove("activeFile");
+      }
+    }
+    
+
   });
+});
+
+// Add active class to the first language in the primary menu on page load
+languages[0].classList.add("active");
+
+// Trigger click event on the first language to populate the secondary menu
+languages[0].click(); */
+
+/* console.log(allfiles);
+
+allfiles.forEach((file, indexfile) => {
+    if(file.parentElement.classList.contains("active")){
+    file.addEventListener("click", (event) =>{
+      let target = event.target;
+      console.log(event.target);
+    });
   }
 
+    
+}); 
 
- */
+
+  
+
+
+
+
+// Trigger click event on the first language to populate the secondary menu
+allfiles[0].click(); */
