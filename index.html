@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-    <link rel="stylesheet" href="dist/main.css">
-    <script src="./dist/stackedCards.min.js"></script>
     <script defer src="app/js/app.js"></script>
+    <link rel="stylesheet" href="dist/main.css">
+    
 </head>
 <body>
 
@@ -54,7 +54,6 @@
             <img src="/images/content/Interface.svg" alt="interface-img">
           </div>
         </div>
-        
         <div class="grid">
           <div class="card">
             <div class="circle">
@@ -85,24 +84,17 @@
             <div class="text">Ux Design</div>
           </div>
         </div>
-        
         <div class="info-block">
-          <a class="info-block__image" href="#about" >
-            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_347_888)">
-                <path d="M31.4925 36.5075L51 55.9725L70.5075 36.5075L76.5 42.5L51 68L25.5 42.5L31.4925 36.5075Z" fill="#AA7051"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_347_888">
-                <rect width="102" height="102" fill="white" transform="matrix(0 1 -1 0 102 0)"/>
-                </clipPath>
-                </defs>
-            </svg>
-          </a>
-        <div class="info-block__text">Learn more about me</div>
+          <div class="info-block__text">Learn more about me</div>
+            <div class="info-block--image">
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="80px" viewbox="0 0 50 80" enable-background="new 0 0 50 80" xml:space="preserve">
+                    <path class="first-path" fill="#FFFFFF" d="M24.752,79.182c-0.397,0-0.752-0.154-1.06-0.463L2.207,57.234c-0.306-0.305-0.458-0.656-0.458-1.057                  s0.152-0.752,0.458-1.059l2.305-2.305c0.309-0.309,0.663-0.461,1.06-0.461c0.398,0,0.752,0.152,1.061,0.461l18.119,18.119                  l18.122-18.119c0.306-0.309,0.657-0.461,1.057-0.461c0.402,0,0.753,0.152,1.059,0.461l2.306,2.305                  c0.308,0.307,0.461,0.658,0.461,1.059s-0.153,0.752-0.461,1.057L25.813,78.719C25.504,79.027,25.15,79.182,24.752,79.182z"></path>
+                    <path class="second-path" fill="#FFFFFF" d="M24.752,58.25c-0.397,0-0.752-0.154-1.06-0.463L2.207,36.303c-0.306-0.304-0.458-0.655-0.458-1.057                  c0-0.4,0.152-0.752,0.458-1.058l2.305-2.305c0.309-0.308,0.663-0.461,1.06-0.461c0.398,0,0.752,0.153,1.061,0.461l18.119,18.12                  l18.122-18.12c0.306-0.308,0.657-0.461,1.057-0.461c0.402,0,0.753,0.153,1.059,0.461l2.306,2.305                  c0.308,0.306,0.461,0.657,0.461,1.058c0,0.401-0.153,0.753-0.461,1.057L25.813,57.787C25.504,58.096,25.15,58.25,24.752,58.25z"></path>
+                </svg>
+            </div>
+      
+       
         </div>
-        
-
       </section>
       <section class="skills" id="skills">
         <h1>My Tech Stack</h1>
@@ -217,9 +209,7 @@
             </ul>
           </sidebar>
           <div class="editor-code">
-
-  
-             <nav id="code-folders" class="code-folders">
+            <nav id="code-folders" class="code-folders">
               <ul id="html" class="content">
                 <div class="file">
                   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_328_1178)"> <path d="M6 2.5C4.9 2.5 4.01 3.4 4.01 4.5L4 20.5C4 21.6 4.89 22.5 5.99 22.5H18C19.1 22.5 20 21.6 20 20.5V8.5L14 2.5H6ZM13 9.5V4L18.5 9.5H13Z" fill="white"/> </g> <defs> <clipPath id="clip0_328_1178"> <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/> </clipPath> </defs> </svg>
@@ -282,8 +272,14 @@
                
             </nav> 
             <div class="code-content">
-              <div class="line-number" id="line-number"></div>
-              <div class="code" id="code"></div>
+              <span class="line-numbers" id="line-numbers">
+              </span>
+              <div id="htmlReadme">
+                hello how are you?<br>
+                hello how are you?<br>
+                hello how are you? <br>
+                hello how are you?<br>
+               </div>
             </div>
             <div class="status-bar">
               <div>LF</div>
@@ -299,23 +295,64 @@
         </div>
       </section>
       <section class="projects" id="projects">
-        <h1>My Recent Projects </h1>
-        <div class="stacked-cards mycards">
-  <ul>
-    <li>
-      Card 1
-      <img src="./images/projects-showcase/user-evangelion.jpg" alt="">
-    </li>
-    <li>
-      Card 2
-      <img src="./images/projects-showcase/user-evangelion.jpg" alt="">
-    </li>
-    <li>
-      Card 3
-      <img src="./images/projects-showcase/user-evangelion.jpg" alt="">
-    </li>
-  </ul>
-</div>
+        <div id="carousel" class="carousel">
+
+          <div id='iten_1' class="hideLeft">
+           <img src="https://cdn.pixabay.com/photo/2017/08/15/08/23/stars-2643089__340.jpg">
+         </div>
+   
+         <div id='item_2' class="prevLeftSecond">
+           <img src="https://cdn.pixabay.com/photo/2012/11/28/11/28/rocket-launch-67723__340.jpg">
+         </div>
+   
+         <div id='item_3' class="prev">
+           <img src="https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_960_720.jpg">
+         </div>
+   
+         <div id='item_4' class="selected">
+           <img src="https://cdn.pixabay.com/photo/2020/06/17/09/28/wormhole-5308810__340.jpg">
+         </div>
+   
+         <div id='item_5' class="next">
+           <img src="https://cdn.pixabay.com/photo/2016/11/18/22/58/stars-1837306__340.jpg">
+         </div>
+   
+         <div id='item_6' class="nextRightSecond">
+           <img src="https://cdn.pixabay.com/photo/2017/02/09/09/11/starry-sky-2051448__340.jpg">
+         </div>
+   
+         <div id='item_7' class="hideRight">
+           <img src="https://cdn.pixabay.com/photo/2011/12/15/11/37/galaxy-11188__340.jpg">
+         </div>
+   
+         <div id='item_8' class="hideRight">
+           <img src="https://cdn.pixabay.com/photo/2011/12/15/11/32/pismis-24-11186__340.jpg">
+         </div>
+   
+       </div>
+   
+       <div class="buttons">
+         <button class="button-82-pushable" role="button" id="prev"><span class="button-82-shadow"></span><span class="button-82-edge"></span><span class="button-82-front text">Previous</span></button>
+   
+   
+         <button class="button-82-pushable" role="button" id="next"><span class="button-82-shadow"></span><span class="button-82-edge"></span><span class="button-82-front text">Next</span></button>
+       </div>
+        <!-- <div class="stacked-cards mycards">
+          <ul>
+            <li>
+              Card 1
+              <img src="./images/projects-showcase/user-evangelion.jpg" alt="">
+            </li>
+            <li>
+              Card 2
+              <img src="./images/projects-showcase/user-evangelion.jpg" alt="">
+            </li>
+            <li>
+              Card 3
+              <img src="./images/projects-showcase/user-evangelion.jpg" alt="">
+            </li>
+          </ul>
+        </div> -->
 
       </section>
       <section class="contact" id="contact">
@@ -382,6 +419,6 @@
     </div>
       
   </aside>
-  
+  <script type="text/javascript" src="app/js/carousel.js"></script>
   </body>
   </html>

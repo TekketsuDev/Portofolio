@@ -6,6 +6,7 @@
   /* Stay on top */
   width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  z-index: 20;
 }
 
 #site-header a {

@@ -91,9 +91,8 @@ clickLabel.forEach((label, index) => {
     document.querySelectorAll(".file").forEach(el => {
       el.classList.remove('selected')
     });
-    console.log(document.querySelectorAll(".file").forEach(el => {
-      el.classList.remove('selected')
-    }));
+ 
+    
     // add the "active" class to the parent li element of the clicked label
     label.parentNode.classList.add('active');
 
@@ -101,7 +100,7 @@ clickLabel.forEach((label, index) => {
       let allSibling = label.nextElementSibling.querySelectorAll("div")
       allSibling.forEach(file =>{
         file.addEventListener('click', c =>{
-         
+          
           if(label.parentNode.classList.contains('active')){
             document.querySelectorAll(".file").forEach(el => {
               el.classList.remove('selected')
@@ -109,6 +108,7 @@ clickLabel.forEach((label, index) => {
             file.classList.add('selected');
          
           }
+          countLines();
         });
       })
   
@@ -127,14 +127,29 @@ clickLabel.forEach((label, index) => {
 });
 
 clickLabel[0].click();
-console.log(document.querySelectorAll(".file"));
 
 
-var stackedCardSlide = new stackedCards({
-    selector: '.mycards',
-	 	layout: "slide",
-	 	transformOrigin: "center"   });
-stackedCardSlide.init();
+const textarea = document.querySelector('textarea')
+const lineNumbers = document.querySelector('.line-numbers')
+
+textarea.addEventListener('keyup', event => {
+  const numberOfLines = event.target.value.split('\n').length
+
+  lineNumbers.innerHTML = Array(numberOfLines)
+    .fill('<span></span>')
+    .join('')
+})
+function countLines() {
+ /*  var el = document.getElementById('htmlReadme');
+  var divHeight = el.offsetHeight
+  var lineHeight = 1.15;
+  var lines = divHeight / lineHeight;
+  console.log("Lines: " + lines); */
+  const textLines = document.getElementById("htmlReadme").innerText;
+      const numLines = textLines.split("").length;
+      document.getElementById("line-numbers").innerText=numLines-1;
+}
+
 /* console.log(clickLabel); */
 /* addGlobalEventListener('click', "label.language-label", e => {
  
@@ -203,3 +218,5 @@ allfiles.forEach((file, indexfile) => {
 
 // Trigger click event on the first language to populate the secondary menu
 allfiles[0].click(); */
+
+
